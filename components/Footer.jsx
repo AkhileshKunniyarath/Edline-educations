@@ -1,4 +1,5 @@
 "use client";
+import Link from 'next/link';
 import { FiFacebook, FiTwitter, FiInstagram, FiLinkedin, FiPhone, FiMail, FiMapPin, FiArrowRight } from 'react-icons/fi';
 
 const scrollTo = (id) => {
@@ -119,9 +120,20 @@ const Footer = () => {
             &copy; {currentYear} ED LINE Edu Consultancy. All rights reserved.
           </p>
           <div className="flex gap-4 text-sm text-gray-500">
-            <span className="hover:text-white transition-colors cursor-pointer">Privacy Policy</span>
-            <span className="hover:text-white transition-colors cursor-pointer">Terms of Service</span>
+            <Link href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
+            <Link href="/terms-and-conditions" className="hover:text-white transition-colors">Terms of Service</Link>
           </div>
+          <a
+            href="https://touchpointe.digital"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-xs text-gray-600 hover:text-blue-400 transition-colors flex items-center gap-1 group"
+          >
+            Powered by{' '}
+            <span className="font-semibold text-gray-500 group-hover:text-blue-400 transition-colors">
+              touchpointe.digital
+            </span>
+          </a>
         </div>
       </div>
     </footer>

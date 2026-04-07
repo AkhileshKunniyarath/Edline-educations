@@ -81,7 +81,7 @@ const Contact = () => {
           {/* Map Embed */}
           <div className="h-full min-h-[400px] w-full relative bg-gray-200">
             <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.5!2d76.0100!3d10.9800!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba7f0000000001%3A0x0!2sPookkarathara%2C%20Edappal%2C%20Kerala%20679576!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7839.051938835531!2d75.99041450787608!3d10.770969303524042!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba7b95de960eb3b%3A0xf61e8d5d562bfbe1!2sPookkarathara%2C%20Kerala%20679576!5e0!3m2!1sen!2sin!4v1775587968416!5m2!1sen!2sin" 
               width="100%" 
               height="100%" 
               style={{ border: 0, position: 'absolute', top: 0, left: 0 }} 
