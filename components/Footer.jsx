@@ -20,6 +20,12 @@ const quickLinks = [
 ];
 
 const courses = ['Medical (MBBS/BDS)', 'Nursing Sciences', 'Allied Health', 'Engineering (BTech)', 'Management (BBA/MBA)', 'Pharmacy'];
+const poweredByUrl = 'https://touchpointe.digital';
+
+const openPoweredBySite = (e) => {
+  e.preventDefault();
+  window.open(poweredByUrl, '_blank', 'noopener,noreferrer');
+};
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -124,9 +130,12 @@ const Footer = () => {
             <Link href="/terms-and-conditions" className="hover:text-white transition-colors">Terms of Service</Link>
           </div>
           <a
-            href="https://touchpointe.digital"
+            href={poweredByUrl}
+            onClick={openPoweredBySite}
             target="_blank"
             rel="noopener noreferrer"
+            referrerPolicy="no-referrer"
+            title={poweredByUrl}
             className="text-xs text-gray-600 hover:text-blue-400 transition-colors flex items-center gap-1 group"
           >
             Powered by{' '}
