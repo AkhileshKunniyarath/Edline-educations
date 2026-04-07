@@ -66,7 +66,7 @@ const RegistrationForm = () => {
             
             <div className="relative z-10 mt-8 pt-8 border-t border-blue-700/50">
               <p className="text-sm text-blue-200 mb-2">Have urgent questions?</p>
-              <p className="text-xl font-bold text-accent">+91 98765 43210</p>
+              <p className="text-xl font-bold text-accent">+91 98470 82999</p>
             </div>
           </div>
           

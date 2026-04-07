@@ -29,8 +29,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="text-blue-300 text-sm mb-1">Call Us Anywhere</p>
-                    <p className="text-lg font-semibold">+91 98765 43210</p>
-                    <p className="text-lg font-semibold">+91 98765 43211</p>
+                    <p className="text-lg font-semibold">+91 98470 82999</p>
                   </div>
                 </div>
 
@@ -40,8 +39,8 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="text-blue-300 text-sm mb-1">WhatsApp Us</p>
-                    <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer" className="text-lg font-semibold text-white hover:text-green-300 transition-colors">
-                      +91 98765 43210
+                    <a href="https://wa.me/919847082999" target="_blank" rel="noopener noreferrer" className="text-lg font-semibold text-white hover:text-green-300 transition-colors">
+                      +91 98470 82999
                     </a>
                   </div>
                 </div>
@@ -52,7 +51,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="text-blue-300 text-sm mb-1">Email Us</p>
-                    <p className="text-lg font-semibold">info@edlineconsultancy.com</p>
+                    <p className="text-lg font-semibold">edlineconsultancy@gmail.com</p>
                     <p className="text-sm text-blue-200 mt-1">We'll reply within 24 hours</p>
                   </div>
                 </div>
@@ -63,8 +62,8 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="text-blue-300 text-sm mb-1">Office Location</p>
-                    <p className="text-lg font-semibold">Opp. Parche, Near Makma Hypermart</p>
-                    <p className="text-blue-100">Athinhal, Kanhangad, Kerala</p>
+                    <p className="text-lg font-semibold">Pookkarathara, Edappal</p>
+                    <p className="text-blue-100">Kerala 679576</p>
                   </div>
                 </div>
               </div>
@@ -82,7 +81,7 @@ const Contact = () => {
           {/* Map Embed */}
           <div className="h-full min-h-[400px] w-full relative bg-gray-200">
             <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3905.7836374092284!2d75.08863611481546!3d12.317544091285324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba465b05a6e7dfd%3A0xc3fce42a17fbc6c6!2sKanhangad%2C%20Kerala!5e0!3m2!1sen!2sin!4v1628104859062!5m2!1sen!2sin" 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.5!2d76.0100!3d10.9800!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba7f0000000001%3A0x0!2sPookkarathara%2C%20Edappal%2C%20Kerala%20679576!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
               width="100%" 
               height="100%" 
               style={{ border: 0, position: 'absolute', top: 0, left: 0 }} 

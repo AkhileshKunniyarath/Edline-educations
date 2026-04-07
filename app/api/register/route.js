@@ -39,7 +39,7 @@ export async function POST(request) {
 
     const mailOptions = {
       from: `"ED LINE Website" <${process.env.SMTP_USER}>`,
-      to: 'info@edlineconsultancy.com',
+      to: 'edlineconsultancy@gmail.com',
       replyTo: email || undefined,
       subject: `📋 New Registration – ${name}`,
       html: `

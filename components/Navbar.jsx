@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect, useCallback } from 'react';
-import Link from 'next/link';
+import Image from 'next/image';
 import { FiMenu, FiX } from 'react-icons/fi';
 
 const Navbar = () => {
@@ -39,10 +39,15 @@ const Navbar = () => {
     >
       <div className="container mx-auto flex justify-between items-center px-4">
         {/* Logo */}
-        <a href="#home" onClick={(e) => { e.preventDefault(); scrollTo('home'); }} className="flex items-center gap-2">
-          <div className="w-10 h-10 bg-blue-700 rounded-md flex items-center justify-center text-white font-bold text-xl">
-            ED
-          </div>
+        <a href="#home" onClick={(e) => { e.preventDefault(); scrollTo('home'); }} className="flex items-center gap-3">
+          <Image
+            src="/brand-logo.svg"
+            alt="ED LINE Edu Consultancy logo"
+            width={42}
+            height={42}
+            priority
+            className="h-10 w-10 rounded-md"
+          />
           <div>
             <h1 className="text-xl font-bold leading-tight m-0" style={{ color: '#0A4D8C' }}>ED LINE</h1>
             <p className="text-xs font-medium m-0" style={{ color: '#1F7AE0' }}>Edu Consultancy</p>
