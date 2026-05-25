@@ -29,7 +29,7 @@ const Hero = () => {
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
 
           {/* ── LEFT COLUMN ── */}
-          <div className="text-center lg:text-left space-y-6 lg:space-y-8 animate-fade-in">
+          <div className="mx-auto max-w-2xl text-center lg:mx-0 lg:max-w-[44rem] lg:text-left space-y-6 lg:space-y-7 animate-fade-in">
 
             {/* Badge */}
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border text-sm font-semibold"
@@ -39,18 +39,17 @@ const Hero = () => {
             </div>
 
             {/* Headline */}
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black leading-tight tracking-tight text-white">
-              Launch Your{' '}
+            <h1 className="max-w-[12ch] text-4xl sm:text-[3.6rem] md:text-[4rem] lg:text-[4.5rem] font-black leading-[0.95] tracking-[-0.03em] text-white mx-auto lg:mx-0">
+              <span className="whitespace-nowrap">Trusted Education</span>{' '}
               <span className="block" style={{ background: 'linear-gradient(90deg, #60A5FA 0%, #93C5FD 50%, #FFB400 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
-                Medical Career
+                Consultancy
               </span>
-              <span className="text-white">With Confidence</span>
+              <span className="text-white">For Medical & Professional Admissions</span>
             </h1>
 
             {/* Sub-copy */}
-            <p className="text-base md:text-xl leading-relaxed max-w-xl mx-auto lg:mx-0" style={{ color: '#94A3B8' }}>
-              Expert admissions guidance for MBBS, BDS & Allied Health Sciences in top colleges across South India.
-              Your dream seat — guaranteed.
+            <p className="text-base md:text-lg leading-relaxed max-w-2xl mx-auto lg:mx-0" style={{ color: '#94A3B8' }}>
+              ED LINE Edu Consultancy helps students in Kerala secure MBBS, BDS, Nursing, Allied Health, Engineering, and Management admissions in top colleges across South India.
             </p>
 
             {/* Trust bullets */}
@@ -64,7 +63,7 @@ const Hero = () => {
             </div>
 
             {/* CTAs */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-2">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-1">
               <a href="#register"
                 onClick={(e) => { e.preventDefault(); scrollTo('register'); }}
                 className="group relative inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl font-bold text-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl text-white"
@@ -98,86 +97,88 @@ const Hero = () => {
           </div>
 
           {/* ── RIGHT COLUMN — hidden on mobile, shown on lg+ ── */}
-          <div className="hidden lg:flex relative items-center justify-center">
+          <div className="hidden lg:flex relative items-center justify-center lg:justify-end">
+            <div className="relative w-full max-w-[32rem]">
 
-            {/* Main Card */}
-            <div className="relative w-full max-w-lg rounded-3xl p-1 shadow-2xl" style={{ background: 'linear-gradient(135deg, rgba(30,90,220,0.6), rgba(255,180,0,0.3))' }}>
-              <div className="rounded-[22px] p-8 space-y-6 relative overflow-hidden" style={{ background: '#0D1A33' }}>
+              {/* Main Card */}
+              <div className="relative ml-auto w-full max-w-[29rem] rounded-3xl p-1 shadow-2xl" style={{ background: 'linear-gradient(135deg, rgba(30,90,220,0.6), rgba(255,180,0,0.3))' }}>
+                <div className="rounded-[22px] p-7 space-y-5 relative overflow-hidden" style={{ background: '#0D1A33' }}>
 
-                {/* Inner glow */}
-                <div className="absolute -top-20 -right-20 w-64 h-64 rounded-full opacity-20 blur-3xl pointer-events-none" style={{ background: 'radial-gradient(circle, #60A5FA, transparent)' }} />
+                  {/* Inner glow */}
+                  <div className="absolute -top-20 -right-20 w-64 h-64 rounded-full opacity-20 blur-3xl pointer-events-none" style={{ background: 'radial-gradient(circle, #60A5FA, transparent)' }} />
 
-                {/* Card header */}
-                <div className="flex items-center justify-between">
-                  <div>
-                    <p className="text-xs font-semibold uppercase tracking-widest" style={{ color: '#64748B' }}>Your Roadmap</p>
-                    <h3 className="text-xl font-bold text-white mt-1">Admission Journey</h3>
-                  </div>
-                  <div className="w-12 h-12 rounded-2xl flex items-center justify-center text-2xl" style={{ background: 'rgba(30,90,220,0.25)', border: '1px solid rgba(96,165,250,0.3)' }}>
-                    🎓
-                  </div>
-                </div>
-
-                {/* Steps */}
-                {[
-                  { icon: '📋', step: '01', title: 'Free Consultation', desc: 'Profile assessment & college shortlisting', color: '#3B82F6' },
-                  { icon: '🏛️', step: '02', title: 'College Selection', desc: 'Choose from 100+ verified institutions', color: '#8B5CF6' },
-                  { icon: '📄', step: '03', title: 'Secure Admission', desc: 'End-to-end documentation & seat lock', color: '#F59E0B' },
-                ].map((item, i) => (
-                  <div key={i} className="flex items-start gap-4 group">
-                    <div className="w-10 h-10 rounded-xl flex items-center justify-center text-lg flex-shrink-0 transition-all duration-300 group-hover:scale-110"
-                      style={{ background: `${item.color}22`, border: `1px solid ${item.color}44` }}>
-                      {item.icon}
+                  {/* Card header */}
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <p className="text-xs font-semibold uppercase tracking-widest" style={{ color: '#64748B' }}>Your Roadmap</p>
+                      <h3 className="text-xl font-bold text-white mt-1">Admission Journey</h3>
                     </div>
-                    <div className="flex-1 min-w-0">
-                      <div className="flex items-center gap-2">
-                        <span className="text-xs font-mono font-bold" style={{ color: item.color }}>{item.step}</span>
-                        <p className="text-sm font-semibold text-white">{item.title}</p>
+                    <div className="w-11 h-11 rounded-2xl flex items-center justify-center text-xl" style={{ background: 'rgba(30,90,220,0.25)', border: '1px solid rgba(96,165,250,0.3)' }}>
+                      🎓
+                    </div>
+                  </div>
+
+                  {/* Steps */}
+                  {[
+                    { icon: '📋', step: '01', title: 'Free Consultation', desc: 'Profile assessment & college shortlisting', color: '#3B82F6' },
+                    { icon: '🏛️', step: '02', title: 'College Selection', desc: 'Choose from 100+ verified institutions', color: '#8B5CF6' },
+                    { icon: '📄', step: '03', title: 'Secure Admission', desc: 'End-to-end documentation & seat lock', color: '#F59E0B' },
+                  ].map((item, i) => (
+                    <div key={i} className="flex items-start gap-3.5 group">
+                      <div className="w-9 h-9 rounded-xl flex items-center justify-center text-base flex-shrink-0 transition-all duration-300 group-hover:scale-110"
+                        style={{ background: `${item.color}22`, border: `1px solid ${item.color}44` }}>
+                        {item.icon}
                       </div>
-                      <p className="text-xs mt-0.5" style={{ color: '#64748B' }}>{item.desc}</p>
+                      <div className="flex-1 min-w-0">
+                        <div className="flex items-center gap-2">
+                          <span className="text-xs font-mono font-bold" style={{ color: item.color }}>{item.step}</span>
+                          <p className="text-[0.95rem] font-semibold text-white">{item.title}</p>
+                        </div>
+                        <p className="text-[0.78rem] mt-0.5" style={{ color: '#64748B' }}>{item.desc}</p>
+                      </div>
                     </div>
-                  </div>
-                ))}
+                  ))}
 
-                {/* CTA inside card */}
-                <a href="#register"
-                  onClick={(e) => { e.preventDefault(); scrollTo('register'); }}
-                  className="flex items-center justify-center gap-2 w-full py-3 rounded-xl font-bold text-sm text-white transition-all duration-300 hover:brightness-110"
-                  style={{ color: '#ffffff', background: 'linear-gradient(90deg, #1E5ADC, #3B82F6)' }}>
-                  Start Your Journey Today <FiArrowRight />
-                </a>
+                  {/* CTA inside card */}
+                  <a href="#register"
+                    onClick={(e) => { e.preventDefault(); scrollTo('register'); }}
+                    className="flex items-center justify-center gap-2 w-full py-3 rounded-xl font-bold text-sm text-white transition-all duration-300 hover:brightness-110"
+                    style={{ color: '#ffffff', background: 'linear-gradient(90deg, #1E5ADC, #3B82F6)' }}>
+                    Start Your Journey Today <FiArrowRight />
+                  </a>
+                </div>
               </div>
+
+              {/* Floating Badges */}
+              <div className="absolute left-4 top-0 flex w-[12.5rem] items-center gap-2.5 rounded-2xl bg-white px-3 py-2.5 shadow-2xl animate-bounce" style={{ animationDuration: '3s' }}>
+                <div className="w-8 h-8 rounded-xl bg-blue-100 flex items-center justify-center text-blue-600">
+                  <FiAward className="text-base" />
+                </div>
+                <div>
+                  <p className="text-[10px] text-gray-400 font-semibold uppercase tracking-wide">Partners</p>
+                  <p className="font-black text-gray-900 text-sm leading-none">100+ Colleges</p>
+                </div>
+              </div>
+
+              <div className="absolute -right-14 top-[31%] flex items-center gap-2.5 rounded-2xl bg-white px-3.5 py-2.5 shadow-2xl">
+                <span className="flex h-3 w-3 relative">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+                </span>
+                <span className="font-bold text-sm text-gray-800">Scholarships Available</span>
+              </div>
+
+              <div className="absolute -bottom-1 -right-10 flex w-[12.25rem] items-center gap-2.5 rounded-2xl bg-white px-3 py-2.5 shadow-2xl animate-bounce" style={{ animationDuration: '3.8s', animationDelay: '1s' }}>
+                <div className="w-8 h-8 rounded-xl bg-orange-100 flex items-center justify-center text-orange-500">
+                  <FiBookOpen className="text-base" />
+                </div>
+                <div>
+                  <p className="font-black text-gray-900 text-sm leading-none">NEET / KEAM</p>
+                  <p className="text-[10px] text-gray-400 font-medium">Expert Guidance</p>
+                </div>
+              </div>
+
             </div>
-
-            {/* Floating Badges — only on large screens so they don't overflow on mobile */}
-            <div className="absolute -top-4 -left-14 bg-white p-3.5 rounded-2xl shadow-2xl flex items-center gap-3 animate-bounce" style={{ animationDuration: '3s' }}>
-              <div className="w-9 h-9 rounded-xl bg-blue-100 flex items-center justify-center text-blue-600">
-                <FiAward className="text-lg" />
-              </div>
-              <div>
-                <p className="text-[10px] text-gray-400 font-semibold uppercase tracking-wide">Partners</p>
-                <p className="font-black text-gray-900 text-sm leading-none">100+ Colleges</p>
-              </div>
-            </div>
-
-            <div className="absolute top-1/3 -right-14 bg-white px-4 py-3 rounded-2xl shadow-2xl flex items-center gap-2.5">
-              <span className="flex h-3 w-3 relative">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
-              </span>
-              <span className="font-bold text-sm text-gray-800">Scholarships Available</span>
-            </div>
-
-            <div className="absolute -bottom-4 -right-12 bg-white p-3.5 rounded-2xl shadow-2xl flex items-center gap-3 animate-bounce" style={{ animationDuration: '3.8s', animationDelay: '1s' }}>
-              <div className="w-9 h-9 rounded-xl bg-orange-100 flex items-center justify-center text-orange-500">
-                <FiBookOpen className="text-lg" />
-              </div>
-              <div>
-                <p className="font-black text-gray-900 text-sm leading-none">NEET / KEAM</p>
-                <p className="text-[10px] text-gray-400 font-medium">Expert Guidance</p>
-              </div>
-            </div>
-
           </div>
         </div>
       </div>

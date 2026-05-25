@@ -35,7 +35,7 @@ const WhyChooseUs = () => {
               Your Trusted Partner for <span style={{ background: 'linear-gradient(90deg, #FFB400, #FEF08A)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Quality Education</span>
             </h3>
             <p className="text-blue-100 text-lg mb-8 max-w-xl">
-              We don't just secure admissions; we craft careers. Our dedicated team of experts ensures you get into the college that best fits your ambitions and budget.
+              We don&apos;t just secure admissions; we craft careers. Our dedicated team of experts ensures you get into the college that best fits your ambitions and budget.
             </p>
             
             <div className="grid sm:grid-cols-2 gap-4 mb-10">

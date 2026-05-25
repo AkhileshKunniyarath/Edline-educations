@@ -94,10 +94,10 @@ const Testimonials = () => {
               }}
             >
               {/* Quote mark */}
-              <div className="text-6xl font-serif leading-none mb-2 select-none" style={{ color: t.accent, opacity: 0.2 }}>"</div>
+              <div className="text-6xl font-serif leading-none mb-2 select-none" style={{ color: t.accent, opacity: 0.2 }}>&ldquo;</div>
 
               <p className="text-sm leading-relaxed mb-6" style={{ color: '#475569' }}>
-                "{t.review}"
+                &ldquo;{t.review}&rdquo;
               </p>
 
               <div className="flex items-center gap-3">
@@ -128,8 +128,8 @@ const Testimonials = () => {
             return (
               <div className="rounded-2xl p-7 bg-white transition-all duration-300"
                 style={{ border: `1.5px solid ${t.accent}`, boxShadow: '0 12px 40px rgba(30,90,220,0.12)' }}>
-                <div className="text-6xl font-serif leading-none mb-2 select-none" style={{ color: t.accent, opacity: 0.2 }}>"</div>
-                <p className="text-base leading-relaxed mb-6" style={{ color: '#475569' }}>"{t.review}"</p>
+                <div className="text-6xl font-serif leading-none mb-2 select-none" style={{ color: t.accent, opacity: 0.2 }}>&ldquo;</div>
+                <p className="text-base leading-relaxed mb-6" style={{ color: '#475569' }}>&ldquo;{t.review}&rdquo;</p>
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-12 h-12 rounded-xl flex items-center justify-center text-base font-black flex-shrink-0"
                     style={{ background: t.bg, border: `1.5px solid ${t.border}`, color: t.accent }}>

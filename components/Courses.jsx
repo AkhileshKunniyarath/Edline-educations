@@ -1,40 +1,25 @@
 import { FiHeart, FiBriefcase, FiMonitor, FiSettings } from 'react-icons/fi';
+import { courseCategories } from '@/lib/site';
 
 const Courses = () => {
-  const courseCategories = [
-    {
-      title: "Medical Courses",
+  const categoryStyles = {
+    "Medical Courses": {
       icon: <FiHeart className="text-4xl text-rose-500 mb-4 group-hover:scale-110 transition-transform" />,
       color: "border-rose-200 bg-rose-50",
-      courses: [
-        "MBBS", "BDS", "BAMS", "BHMS", "MDS", "BPT", "BSc Nursing", "Pharm D", "BPharm", "DPharm", "MSc Nursing"
-      ]
     },
-    {
-      title: "Allied Health Science",
+    "Allied Health Science": {
       icon: <FiSettings className="text-4xl text-blue-500 mb-4 group-hover:scale-110 transition-transform" />,
       color: "border-blue-200 bg-blue-50",
-      courses: [
-        "BSc Radiology (MIT)", "BSc MLT", "Dialysis Technology", "Respiratory Care", "Optometry", "Perfusion Technology", "Cardiac Care Technology", "Emergency Medicine"
-      ]
     },
-    {
-      title: "Management Courses",
+    "Management Courses": {
       icon: <FiBriefcase className="text-4xl text-amber-500 mb-4 group-hover:scale-110 transition-transform" />,
       color: "border-amber-200 bg-amber-50",
-      courses: [
-        "BBA Aviation", "BBA Logistics", "BCA", "BHM", "BSc Hospitality", "BSc Culinary Arts", "MBA", "MCA"
-      ]
     },
-    {
-      title: "Engineering & IT",
+    "Engineering & IT": {
       icon: <FiMonitor className="text-4xl text-emerald-500 mb-4 group-hover:scale-110 transition-transform" />,
       color: "border-emerald-200 bg-emerald-50",
-      courses: [
-        "Computer Science", "Civil Engineering", "Mechanical", "Electronics", "AI / Data Science", "Information Technology"
-      ]
-    }
-  ];
+    },
+  };
 
   return (
     <section id="courses" className="section-padding bg-white">
@@ -48,13 +33,13 @@ const Courses = () => {
           {courseCategories.map((category, index) => (
             <div 
               key={index} 
-              className={`group bg-white rounded-2xl p-6 shadow-sm border-t-4 ${category.color} hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 relative overflow-hidden`}
+              className={`group bg-white rounded-2xl p-6 shadow-sm border-t-4 ${categoryStyles[category.title]?.color || 'border-blue-200 bg-blue-50'} hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 relative overflow-hidden`}
             >
               {/* Decorative background element */}
               <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-white/10 to-gray-100 rounded-bl-full opacity-50 -z-0"></div>
               
               <div className="relative z-10">
-                {category.icon}
+                {categoryStyles[category.title]?.icon}
                 <h3 className="text-xl font-bold text-gray-900 mb-4">{category.title}</h3>
                 <ul className="space-y-2">
                   {category.courses.map((course, idx) => (

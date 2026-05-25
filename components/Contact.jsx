@@ -6,9 +6,9 @@ const Contact = () => {
     <section id="contact" className="section-padding bg-gray-50">
       <div className="container">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="section-title">Get In Touch</h2>
+          <h2 className="section-title">Visit Our Education Consultancy Office</h2>
           <p className="text-gray-600 text-lg">
-            Have questions or ready to start your admission process? Contact us today.
+            Have questions about admissions? Contact our education consultancy team in Edappal, Kerala today.
           </p>
         </div>
 
@@ -52,7 +52,7 @@ const Contact = () => {
                   <div>
                     <p className="text-blue-300 text-sm mb-1">Email Us</p>
                     <p className="text-lg font-semibold">edlineconsultancy@gmail.com</p>
-                    <p className="text-sm text-blue-200 mt-1">We'll reply within 24 hours</p>
+                    <p className="text-sm text-blue-200 mt-1">We&apos;ll reply within 24 hours</p>
                   </div>
                 </div>
 

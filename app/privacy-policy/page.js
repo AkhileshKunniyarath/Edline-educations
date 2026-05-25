@@ -3,6 +3,9 @@ import Link from 'next/link';
 export const metadata = {
   title: 'Privacy Policy | ED LINE Edu Consultancy',
   description: 'Read our Privacy Policy to understand how ED LINE Edu Consultancy collects, uses, and protects your personal information.',
+  alternates: {
+    canonical: '/privacy-policy',
+  },
 };
 
 export default function PrivacyPolicy() {

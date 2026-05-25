@@ -1,6 +1,7 @@
 "use client";
 import Link from 'next/link';
 import { FiFacebook, FiTwitter, FiInstagram, FiLinkedin, FiPhone, FiMail, FiMapPin, FiArrowRight } from 'react-icons/fi';
+import { seoLandingPages } from '@/lib/seo-landing-pages';
 
 const scrollTo = (id) => {
   const el = document.getElementById(id);
@@ -20,6 +21,7 @@ const quickLinks = [
 ];
 
 const courses = ['Medical (MBBS/BDS)', 'Nursing Sciences', 'Allied Health', 'Engineering (BTech)', 'Management (BBA/MBA)', 'Pharmacy'];
+const seoLinks = seoLandingPages.slice(0, 5);
 const poweredByUrl = 'https://touchpointe.digital';
 
 const openPoweredBySite = (e) => {
@@ -33,7 +35,7 @@ const Footer = () => {
   return (
     <footer className="bg-gray-900 text-gray-300 pt-16 pb-8">
       <div className="container">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 mb-12">
           
           {/* Brand Info */}
           <div className="col-span-1 md:col-span-2 lg:col-span-1">
@@ -115,6 +117,25 @@ const Footer = () => {
                 <FiMail className="text-blue-500 text-lg shrink-0" />
                 <a href="mailto:edlineconsultancy@gmail.com" className="hover:text-blue-400 transition-colors">edlineconsultancy@gmail.com</a>
               </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="text-white font-bold text-lg mb-6 relative pb-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-12 after:h-1 after:bg-blue-600 after:rounded-full">
+              SEO Pages
+            </h4>
+            <ul className="space-y-3">
+              {seoLinks.map((page) => (
+                <li key={page.slug}>
+                  <Link
+                    href={`/${page.slug}`}
+                    className="text-sm hover:text-blue-400 flex items-center gap-2 transition-colors group"
+                  >
+                    <FiArrowRight className="text-blue-600 group-hover:translate-x-1 transition-transform" />
+                    {page.shortTitle}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 

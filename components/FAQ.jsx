@@ -1,34 +1,7 @@
 "use client";
 import { useState } from 'react';
 import { FiPlus, FiMinus, FiMessageCircle } from 'react-icons/fi';
-
-const faqs = [
-  {
-    category: 'Admissions',
-    question: "Do you help with NEET admission?",
-    answer: "Yes, we provide end-to-end guidance for NEET counseling, document verification, college shortlisting, and allotment strategies to secure a seat in the best medical colleges."
-  },
-  {
-    category: 'Colleges',
-    question: "Which colleges do you provide admission in?",
-    answer: "We have tied up with 100+ reputed colleges across South India, covering major educational hubs like Bangalore, Mangalore, Coimbatore, and Chennai — across Medical, Nursing, Engineering, and Management streams."
-  },
-  {
-    category: 'Finance',
-    question: "Is scholarship available?",
-    answer: "Yes, we guide eligible students to secure merit-based scholarships and government financial aid. We also negotiate favorable fee structures for early admissions with our partner institutions."
-  },
-  {
-    category: 'Campus Life',
-    question: "Is hostel facility available?",
-    answer: "Absolutely. All our partner colleges offer secure and hygienic hostel facilities for both boys and girls. We provide detailed information on hostel fees, amenities, and campus lifestyle before you finalize your admission."
-  },
-  {
-    category: 'Fees',
-    question: "What are your counseling charges?",
-    answer: "Our initial career counseling and college suggestion session is completely free. We charge a nominal service fee only if you choose to process your admission through us, which covers documentation and admission processing."
-  },
-];
+import { faqItems } from '@/lib/site';
 
 const categoryColors = {
   'Admissions': { bg: '#EFF6FF', text: '#1D4ED8', border: '#BFDBFE' },
@@ -44,7 +17,7 @@ const FAQ = () => {
   const toggle = (i) => setOpenIndex(openIndex === i ? -1 : i);
 
   return (
-    <section className="section-padding" style={{ background: '#F0F6FF' }}>
+    <section id="faq" className="section-padding" style={{ background: '#F0F6FF' }}>
       <div className="container">
 
         {/* Header */}
@@ -74,7 +47,7 @@ const FAQ = () => {
               </div>
               <h3 className="text-xl font-bold mb-2" style={{ color: '#0A1F44' }}>Still have questions?</h3>
               <p className="text-sm mb-5" style={{ color: '#64748B' }}>
-                Our counselors are available Mon – Sat, 9 AM to 7 PM to answer everything personally.
+                Our counselors are available Mon – Sat, 9 AM to 6 PM to answer everything personally.
               </p>
               <a href="#contact"
                 onClick={(e) => { e.preventDefault(); const el = document.getElementById('contact'); if (el) { window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 100, behavior: 'smooth' }); } }}
@@ -100,7 +73,7 @@ const FAQ = () => {
 
           {/* Right: accordion */}
           <div className="lg:col-span-3 space-y-3">
-            {faqs.map((faq, i) => {
+            {faqItems.map((faq, i) => {
               const isOpen = openIndex === i;
               const cat = categoryColors[faq.category];
               return (

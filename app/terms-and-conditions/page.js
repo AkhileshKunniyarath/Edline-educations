@@ -3,6 +3,9 @@ import Link from 'next/link';
 export const metadata = {
   title: 'Terms & Conditions | ED LINE Edu Consultancy',
   description: 'Review the Terms and Conditions governing the use of ED LINE Edu Consultancy services and website.',
+  alternates: {
+    canonical: '/terms-and-conditions',
+  },
 };
 
 export default function TermsAndConditions() {
